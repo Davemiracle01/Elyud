@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asta Free Bot</title>
+<meta name="description" content="Open the Asta Free Bot by AstaTech.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asta Free Bot">
+<meta property="og:description" content="Open the Asta Free Bot by AstaTech.">
+<meta name="theme-color" content="#ece9fb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💬%3C/text%3E%3C/svg%3E">
+<!-- To change the destination, update the URL here and in the #open link below. -->
+<meta http-equiv="refresh" content="4; url=http://157.173.109.213:3000/">
+<style>
+  :root {
+    --paper: #ece9fb;
+    --ink: #1e1a4d;
+    --muted: #5b5690;
+    --bubble: #ffffff;
+    --accent: #3a2fd1;
+    --on-accent: #ffffff;
+    --dots: #3a2fd1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #15122b;
+      --ink: #eeebff;
+      --muted: #a9a4db;
+      --bubble: #26214a;
+      --accent: #6455f0;
+      --dots: #a59bff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.4 "Avenir Next", "Segoe UI", Roboto, system-ui, sans-serif;
+  }
+  main { width: 100%; max-width: 20rem; }
+  .from {
+    margin: 0 0 .35rem .25rem;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .bubble {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 .4rem;
+    padding: .7rem 1rem;
+    background: var(--bubble);
+    border-radius: .3rem 1.1rem 1.1rem 1.1rem;
+    font-weight: 600;
+  }
+  .typing { display: flex; gap: .3rem; padding: .95rem 1rem; }
+  .typing i {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: var(--dots);
+    animation: blip 1.2s ease-in-out infinite;
+  }
+  .typing i:nth-child(2) { animation-delay: .15s; }
+  .typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes blip {
+    0%, 60%, 100% { opacity: .3; transform: none; }
+    30% { opacity: 1; transform: translateY(-.2rem); }
+  }
+  .open {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    margin-top: .9rem;
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .open:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .typing i { animation: none; opacity: .6; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="from">AstaTech</p>
+  <p class="bubble">Taking you to the Asta Free Bot…</p>
+  <p class="bubble typing" aria-hidden="true"><i></i><i></i><i></i></p>
+  <a class="open" id="open" href="http://157.173.109.213:3000/">Open Asta Free Bot</a>
+</main>
+<script>
+  setTimeout(function () {
+    window.location.replace(document.getElementById("open").href);
+  }, 1500);
+</script>
+</body>
+</html>
